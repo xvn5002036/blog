@@ -94,7 +94,8 @@ exclude:
 ignore:
 
 # Enable theme
-theme: butterfly
+#theme: butterfly
+theme: hexo-theme-matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
