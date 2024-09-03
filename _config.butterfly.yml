@@ -9,20 +9,21 @@ nav:
 
 # Menu 目錄
 menu:
-  # Home: / || fas fa-home
-  # Archives: /archives/ || fas fa-archive
-  # Tags: /tags/ || fas fa-tags
-  # Categories: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
+  首頁: / || fas fa-home
+  時間軸: /archives/ || fas fa-archive
+  標籤: /tags/ || fas fa-tags
+  分類: /categories/ || fas fa-folder-open
+  清單||fa fa-heartbeat:
+    音樂: /music/ || fas fa-music
+    照片: /Gallery/ || fas fa-images
+    電影: /movies/ || fas fa-video
+  友鏈: /link/ || fas fa-link
+  關於: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -32,10 +33,12 @@ code_word_wrap: false
 # Social Settings (社交圖標設置)
 # formal:
 #   icon: link || the description || color
+#書寫格式 圖標名：url || 描述性文字 || color
 social:
   # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
-
+  fab fa-github: https://github.com/xxxxx || Github || "#hdhfbb"
+  fas fa-envelope: mailto:xxxxxx@gmail.com || Email || "#000000"
 # Image (圖片設置)
 # --------------------------------------
 
@@ -45,7 +48,7 @@ favicon: /img/favicon.png
 # Avatar (頭像)
 avatar:
   img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
-  effect: false
+  effect: true
 
 # Disable all banner image
 disable_top_img: false
@@ -84,10 +87,12 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
-  position: both
+  position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover:
-    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+default_cover:
+  - https://jsd.012700.xyz/gh/jerryc127/CDN@latest/cover/default_bg.png
+  - https://jsd.012700.xyz/gh/jerryc127/CDN@latest/cover/default_bg2.png
+  - https://jsd.012700.xyz/gh/jerryc127/CDN@latest/cover/default_bg3.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -160,18 +165,17 @@ post_copyright:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-# Sponsor/reward
+# Sponsor/reward(打賞)
 reward:
-  enable: false
+  enable: true
   text:
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
-
+    - img: /img/wechat.jpg
+      link:
+      text: 微信
+    - img: /img/alipay.jpg
+      link:
+      text: 支付寶
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit:
@@ -206,16 +210,16 @@ noticeOutdate:
 # --------------------------------------
 footer:
   owner:
-    enable: true
+    enable: false
     since: 2020
   custom_text:
-  copyright: true # Copyright of theme and framework
+  copyright: false # Copyright of theme and framework
 
 # aside (側邊欄)
 # --------------------------------------
 
 aside:
-  enable: true
+  enable: false
   hide: false
   button: true
   mobile: true # display on mobile
@@ -296,7 +300,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -767,7 +771,7 @@ subtitle:
 
 # Loading Animation (加載動畫)
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -827,8 +831,8 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: flat
-  icons: true
+  style: simple
+  icons: false
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
@@ -947,7 +951,9 @@ CDN:
     # artalk_js:
     # blueimp_md5:
     # busuanzi:
-    # canvas_fluttering_ribbon:
+    canvas_fluttering_ribbon:
+      enable: true
+      mobile: true # false 手機端不顯示 true 手機端顯示
     # canvas_nest:
     # canvas_ribbon:
     # click_heart:
